@@ -1,2 +1,3 @@
 #!/bin/sh
 xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1608x1440 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off
+feh --bg-scale ~/.config/nixos/nix-wallpaper-simple-dark-gray.png
