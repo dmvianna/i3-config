@@ -184,6 +184,25 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# display modes
+
+set $displayMode "Set display mode [1]one [2]two [3]three"
+bindsym $mod+x mode $displayMode
+mode $displayMode {
+    bindsym 1 exec '\
+                ~/.config/i3/scripts/one-display.sh && \
+                mode "default"'
+    bindsym 2 exec '\
+                ~/.config/i3/scripts/two-displays.sh && \
+                mode "default"'
+    bindsym 3 exec '\
+                ~/.config/i3/scripts/three-displays.sh && \
+                mode "default"'
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
