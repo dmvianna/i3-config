@@ -210,6 +210,9 @@ bar {
   separator_symbol ⁞
 }
 
+# screenshots
+bindsym $mod+Home exec maim -s | xclip -selection clipboard -t image/png
+
 exec gammastep-indicator
 exec nm-applet --indicator
 exec blueman-applet
