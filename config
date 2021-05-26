@@ -199,7 +199,8 @@ mode $displayMode {
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
- font pango:DejaVu Sans Mono, FontAwesome 12
+    font pango:Inconsolata Nerd Font Mono, FontAwesome 12
+    # font pango:DejaVu Sans Mono, FontAwesome 12
     position top
     status_command i3status-rs
     colors {
@@ -211,12 +212,14 @@ bar {
         inactive_workspace #333333 #333333 #888888
         urgent_workspace #2f343a #900000 #ffffff
   }
-
   modifier $mod
 }
 
 # screenshots
 bindsym $mod+Home exec maim -s | xclip -selection clipboard -t image/png
+
+# lock screen
+bindsym $mod+c exec i3lock -c 000000 # black background
 
 exec gammastep-indicator
 exec nm-applet --indicator
