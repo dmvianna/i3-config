@@ -217,6 +217,7 @@ bar {
 
 # screenshots
 bindsym $mod+Home exec maim -s | xclip -selection clipboard -t image/png
+bindsym $mod+Shift+Home exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
 
 # lock screen
 bindsym $mod+c exec i3lock -c 000000 # black background
