@@ -223,7 +223,7 @@ bindsym $mod+Shift+Home exec --no-startup-id maim --window $(xdotool getactivewi
 bindsym $mod+c exec i3lock -c 000000 # black background
 
 exec xrdb ~/.config/dotfiles/Xresources
-exec gammastep-indicator
+# exec gammastep-indicator -m randr
 exec nm-applet --indicator
 exec blueman-applet
 exec pasystray
