@@ -215,6 +215,12 @@ bar {
   modifier $mod
 }
 
+# scratchpad
+# send current window to scratchpad
+bindsym $mod+Shift+minus move scratchpad
+# show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 # screenshots
 bindsym $mod+Home exec maim -s | xclip -selection clipboard -t image/png
 bindsym $mod+Shift+Home exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
